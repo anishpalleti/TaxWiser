@@ -11,7 +11,7 @@ import AiAssistant from './pages/AiAssistant';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/TaxWiser">
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
