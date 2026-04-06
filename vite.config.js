@@ -3,8 +3,8 @@ import react from '@vitejs/plugin-react';
 import { VitePWA } from 'vite-plugin-pwa';
 
 // https://vitejs.dev/config/
-export default defineConfig({
-  base: '/TaxWiser/',
+export default defineConfig(({ command }) => ({
+  base: command === 'build' ? '/TaxWiser/' : '/',
   plugins: [
     react(),
     VitePWA({
@@ -40,4 +40,4 @@ export default defineConfig({
       }
     })
   ],
-});
+}));
