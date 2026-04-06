@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { Library, ExternalLink, ShieldAlert, CheckCircle2, DollarSign } from 'lucide-react';
 
 const RESOURCES = [
@@ -167,9 +168,9 @@ export default function Resources() {
                     {res.linkText} <ExternalLink className="w-4 h-4" />
                   </a>
                 ) : (
-                  <a href={res.link} className="flex items-center gap-2 text-primary text-sm font-bold hover:underline">
+                  <Link to={res.link} className="flex items-center gap-2 text-primary text-sm font-bold hover:underline">
                     {res.linkText}
-                  </a>
+                  </Link>
                 )}
               </div>
             )}
